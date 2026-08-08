@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://aman-wxd-byhp.onrender.com",
+      "https://aman-wxd-byhp.onrender.com/submit",
     ],
    
   })
