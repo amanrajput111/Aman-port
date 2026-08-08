@@ -7,10 +7,21 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// CORS
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://aman-wxd-byhp.onrender.com",
+    ],
+   
+  })
+);
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+// Contact Form
 app.post("/submit", async (req, res) => {
   const { name, email, message } = req.body;
 
@@ -21,7 +32,6 @@ app.post("/submit", async (req, res) => {
   });
 
   try {
-    // Create email transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -30,12 +40,12 @@ app.post("/submit", async (req, res) => {
       },
     });
 
-    // Email content
     const mailOptions = {
       from: `"Aman WXD" <${process.env.EMAIL_FROM}>`,
       to: process.env.EMAIL_TO,
       replyTo: email,
       subject: "New Message from Portfolio",
+
       html: `
         <h2>New Form Submission</h2>
 
@@ -56,18 +66,23 @@ app.post("/submit", async (req, res) => {
 
     await transporter.sendMail(mailOptions);
 
-    res.status(200).send(`
-      <h1>Thank you, ${name}!</h1>
-      <p>Your message has been sent successfully.</p>
-    `);
-
+    res.status(200).json({
+      success: true,
+      message: "Your message has been sent successfully.",
+    });
   } catch (error) {
     console.error("Email error:", error);
 
-    res.status(500).send("Failed to send email.");
+    res.status(500).json({
+      success: false,
+      message: "Failed to send email.",
+    });
   }
 });
 
-app.listen(3000, () => {
-  console.log("Server is running successfully on port 3000");
+// IMPORTANT: Render PORT
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

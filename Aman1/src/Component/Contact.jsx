@@ -9,14 +9,14 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  function submitHandler(e) {
+ function submitHandler(e) {
     e.preventDefault();
 
     console.log("Name is :", name);
     console.log("Email is :", email);
     console.log("Message is :", message);
 
-    fetch("https://aman-wxd-byhp.onrender.com/submit", {
+   fetch("https://aman-wxd-byhp.onrender.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
