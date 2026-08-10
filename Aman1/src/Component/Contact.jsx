@@ -16,7 +16,7 @@ const Contact = () => {
     console.log("Email is :", email);
     console.log("Message is :", message);
 
-   fetch("https://aman-wxd-byhp.onrender.com/submit", {
+   fetch("https://aman005.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
