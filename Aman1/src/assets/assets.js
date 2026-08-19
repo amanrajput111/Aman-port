@@ -95,8 +95,8 @@ export const projects = [
     image: projectImg2,
     tech: ["HTML", "CSS", "react", "Tailwind"],
     icons: [FaVuejs, FaFire, FaCloud , FaDatabase],
-    demo: "#",
-    code: "#",
+    demo: "https://task-m4qt.onrender.com/",
+    code: "",
   },
  
   {
