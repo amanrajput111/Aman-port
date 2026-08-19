@@ -90,7 +90,7 @@ export const projects = [
     code: "https://github.com/amanrajput111/ecommerce",
   },
   {
-    title: "Task Management App",
+    title: "Task Management",
     description: "A modern Task Management app built with React.js for efficient task organization and productivity..",
     image: projectImg2,
     tech: ["HTML", "CSS", "react", "Tailwind"],
