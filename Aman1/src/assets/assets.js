@@ -81,12 +81,12 @@ export const skills = [
 
 export const projects = [
   {
-    title: "My Shop ",
+    title: "ShopEase",
     description: "A full-featured online store with shopping cart, user authentication, and payment processing.",
     image: projectImg1,
     tech: ["React" , "Node","Express", "MongoDB","JWT Authentication", "RESTful APIs" ],
     icons: [FaReact, FaNodeJs, FaDatabase , FaStripe],
-    demo: "https://ecommerce-frontend-9c9a.onrender.com/",
+    demo: "https://shopeease-3.onrender.com/",
     code: "https://github.com/amanrajput111/ecommerce",
   },
   {
@@ -105,7 +105,7 @@ export const projects = [
     image: projectImg4,
     tech: ["React.js", "Tailwind CSS", "Framer Motion", "Markdown"],
     icons: [FaReact, FaCloud],
-    demo: "https://aman-wxd.onrender.com/",
+    demo: "https://aman-port.onrender.com/",
     code: "https://github.com/amanrajput111/My-Portfolio",
   },
   {
