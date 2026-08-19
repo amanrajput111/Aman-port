@@ -96,7 +96,7 @@ export const projects = [
     tech: ["HTML", "CSS", "react", "Tailwind"],
     icons: [FaVuejs, FaFire, FaCloud , FaDatabase],
     demo: "https://task-m4qt.onrender.com/",
-    code: "",
+    code: "https://github.com/amanrajput111/Task-Management",
   },
  
   {
